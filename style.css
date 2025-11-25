@@ -1,0 +1,203 @@
+/* -------------------------------
+   1️⃣ General Body Styles
+---------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2f3640;
+
+  /* Background image */
+  background-image: url('background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Pink overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 182, 193, 0.3);
+  z-index: -1;
+}
+
+/* -------------------------------
+   2️⃣ Header & Profile
+---------------------------------*/
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.profile-header p {
+  margin: 5px 0 0;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* -------------------------------
+   3️⃣ Boxes
+---------------------------------*/
+.box {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #273c75;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00a8ff;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.box p, .box li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.box a {
+  color: #40739e;
+  text-decoration: none;
+}
+
+.box a:hover {
+  color: #00a8ff;
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   4️⃣ List Grid for Skills, Hobbies, Websites
+---------------------------------*/
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.list-grid li {
+  background: rgba(64, 115, 158, 0.85);
+  color: white;
+  padding: 12px 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.list-grid li:hover {
+  background: rgba(0, 168, 255, 0.85);
+  transform: translateY(-2px);
+}
+
+.list-grid li a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-grid li a:hover {
+  color: #ffd32a;
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   5️⃣ Weekly Schedule - CSS Grid
+---------------------------------*/
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+
+.schedule-grid div {
+  padding: 15px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  border: 2px solid #40739e;
+  border-radius: 8px;
+}
+
+.schedule-grid .grid-header {
+  font-weight: 600;
+  background: #40739e;
+  color: white;
+}
+
+.schedule-grid div:not(.grid-header):hover {
+  background-color: rgba(64, 115, 158, 0.2);
+}
+
+/* -------------------------------
+   6️⃣ Contact Section
+---------------------------------*/
+#contact {
+  border: 2px solid #e056fd;
+  box-shadow: 0 4px 20px rgba(224, 86, 253, 0.4);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+form input[type="submit"] {
+  background-color: #273c75;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #40739e;
+}
+
+/* -------------------------------
+   7️⃣ Footer
+---------------------------------*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #273c75;
+  color: white;
+}
